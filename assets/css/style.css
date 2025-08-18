@@ -10,7 +10,7 @@ html {
 }
 
 .dark-theme {
-  background-color: #2d2d2d;
+    background-color: #2d2d2d;
 }
 
 .hidden {
@@ -62,6 +62,7 @@ header img {
     border-radius: 30px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 50px;
+    overflow-x: auto;
 }
 
 .calendar-structure {
@@ -229,12 +230,12 @@ header img {
 }
 
 .list-style {
-display:flex;
-flex-direction:row;
-align-items:center;
-justify-content: space-evenly;
-padding: 1rem;
-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap: 2rem;
 }
 
 .input-modified {
