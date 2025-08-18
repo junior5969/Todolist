@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lexend Deca", sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+.dark-theme {
+  background-color: #2d2d2d;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+header img {
+    width: 140px;
+}
+
+.dark-mode-btn {
+    background-color: rgb(157, 156, 156);
+    padding: 0.4rem;
+    border: transparent;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+}
+
+.light-mode-btn {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0.4rem;
+    border: transparent;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+}
+
+/*CALENDARIO*/
+
+#calendar {
+    padding: 1rem;
+    border: 2px solid rgb(169, 169, 169);
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+
+.calendar-structure {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+    margin: auto;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.calendar-title {
+    color: rgb(255, 82, 117);
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 500;
+    padding: 0.5em;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.week-day-style {
+    font-weight: 500;
+    padding: 0.5em;
+}
+
+.day-style {
+    height: 40px;
+    width: 14.2%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 0.5rem;
+}
+
+.day-style:hover {
+    background-color: rgb(253, 162, 180);
+    border-radius: 10px;
+}
+
+.date-label {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-weight: 500;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-btn {
+    margin: 0 20px;
+    background-color: rgb(255, 82, 117);
+    padding: 0.4rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/*LISTA*/
+
+#todo-list {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(238, 238, 238);
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 30px 0;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    color: rgb(255, 82, 117);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 4rem;
+}
+
+.input-type {
+    border-radius: 30px;
+    padding: 1.3rem;
+    height: 30px;
+    width: 100%;
+    max-width: 600px;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    border: none;
+}
+
+.input-type:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(159, 159, 159);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.button {
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    background-color: rgb(255, 82, 117);
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-span {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-family: "Poppins", sans-serif;
+    margin-left: 3px;
+}
+
+.list {
+    list-style: none;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    border: 1px solid rgb(255, 82, 117);
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+.list li {
+    border: transparent;
+    padding: 0.8rem;
+    margin: 20px 5px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.list-style {
+display:flex;
+flex-direction:row;
+align-items:center;
+justify-content: space-evenly;
+padding: 1rem;
+gap: 2rem;
+}
+
+.input-modified {
+    border-radius: 10px;
+    padding: 0.4rem;
+    font-size: 1rem;
+}

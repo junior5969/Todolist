@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="App pensata per avere una lista di attività da fare, da poter gestire aggiungendone nuove, eliminando quelle fatte e suddividendo le attività per giorno"
+    >
+    <meta name="keywords" content="List, action, icon, delete, add, calendar">
+    <meta name="author" content="Chiara">
+
+    <meta property="og:title" content="Todo-list">
+    <meta
+      property="og:description"
+      content="App dedicata agli amanti dell'organizzazione delle proprie attività"
+    >
+    <meta
+      property="og:image"
+      content="https://junior5969.github.io/Todolist/assets/img/logo.png"
+    >
+    <meta property="og:url" content="https://junior5969.github.io/Todolist">
+    <meta property="og:type" content="app">
+
+    <!--FONT FAMILY-->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    >
+
+    <!--BOOTSTRAP ICON-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!--CSS+FAVICON-->
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>To do list</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="assets/img/logo.png"
+        alt="Logo To do con simbolo di cerchio e V"
+      >
+      <button class="dark-mode-btn"><i class="bi bi-sun-fill"></i></button>
+      <button class="light-mode-btn hidden"><i class="bi bi-sun"></i></button>
+    </header>
+
+    <main>
+      <section id="todo-list">
+        <div id="calendar"></div>
+
+        <h1 class="title">To do list</h1>
+
+        <div class="container">
+          <form class="addElement form">
+            <label for="new-task" class="sr-only"
+              >Inserisci nuova attività</label
+            >
+            <input
+              type="text"
+              id="new-task"
+              class="input-type"
+              placeholder="Quale attività vuoi aggiungere?"
+            >
+            <button type="submit" class="button">
+              <span class="button-span"><i class="bi bi-plus-lg"></i></span
+              >Aggiungi
+            </button>
+          </form>
+          <div class="list-container" id="test">
+            <ul class="list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+       <script type="module" src="assets/script/app.js" defer></script>
+  </body>
+</html>
