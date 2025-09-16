@@ -24,7 +24,7 @@ form.addEventListener("submit", (e) => {
   const value = input.value.trim();
   if (!value) return;
 
-  //se la proprietà selectedDate dell'oggetto singleArrayDate non esiste, crea un array vuoto 
+  //si accede alla proprietà selectedDate dell'oggetto singleArrayDate e si crea un array vuoto se non vi è già un array esistente 
   if (!singleArrayDate[selectedDate]) {
     singleArrayDate[selectedDate] = [];
   }

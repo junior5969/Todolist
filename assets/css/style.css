@@ -250,6 +250,10 @@ header img {
     flex-wrap: wrap;
 }
 
+.dragstart {
+    color: red;
+}
+
 .pointer {
     cursor: pointer;
 }

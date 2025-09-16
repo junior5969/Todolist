@@ -5,6 +5,7 @@ import {addTask} from "./task.js";
 
 //creiamo una variabile singleDayArrray il cui valore viene definito dal localStorage, se qui non vi è nessun contenuto allora crea un oggetto vuoto {}.
 //JSON.parse converte in oggetto la stringa "todoListByDate utilizzata come indicatore del contenuto della variabile singleArrayDate"
+//è una sorta di database, un oggetto, costituito da proprietà chiave:valore che sono data:array di task
 export const singleArrayDate = JSON.parse(localStorage.getItem("todoListByDate")) || {};
 
 export let selectedDate = null;
@@ -76,7 +77,7 @@ export function updateCalendar(addListCallback, listDetailsCallback) {
       currentMonth = 12;
       currentYear--;
     }
-    updateCalendar(addListCallback, listDetailsCallback);
+    updateCalendar(addListCallback, listDetailsCallback); //addListCallback, listDetailsCallback sono i parametri della funzione (come a,b) che fanno riferimento ad addList per creare la lista e listDetails per creare il <p> con la data
   });
 
   document.getElementById("nextMonth").addEventListener("click", () => {
@@ -102,6 +103,8 @@ export function updateCalendar(addListCallback, listDetailsCallback) {
   });
 }
 
+
+//funzione per creare <p> con data selezionata
 export function listDetails(dateStr) {
   selectedDate = dateStr;
   const listContainer = document.querySelector(".list");

@@ -9,6 +9,17 @@ export function scaleEffect(element, scale = 1.25, transition = "transform 0.3s 
   });
 }
 
+// Funzione per rendere un elemento trascinabile
+export function makeDraggable(element) {
+  if (!element) return;
+
+  element.setAttribute("draggable", "true"); // serve per permettere il drag
+
+  element.addEventListener("dragstart", (ev) => {
+    ev.dataTransfer.setData("text/plain", ev.target.id);
+    element.classList.add("dragstart");
+  });
+}
 
 export function dragAndDrop(element) {
   if (!element) return;
@@ -24,6 +35,7 @@ export function dragAndDrop(element) {
     const draggedElement = document.getElementById(id);
     if (draggedElement) {
       element.appendChild(draggedElement);
+      draggedElement.classList.remove("dragstart");
     }
   });
 }

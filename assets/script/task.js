@@ -1,5 +1,5 @@
 import { selectedDate, singleArrayDate, listDetails } from "./calendar.js";
-import { scaleEffect, dragAndDrop } from "./style.js";
+import { scaleEffect,makeDraggable, dragAndDrop } from "./style.js";
 
 const listContainer = document.querySelector(".list");
 
@@ -87,6 +87,7 @@ export function addTask() {
 
     scaleEffect(noDone);
     scaleEffect(eliminate);
+    makeDraggable(li);
     dragAndDrop(listContainer);
 
     li.append(noDone, done, liText, modified, check, eliminate);
