@@ -25,6 +25,7 @@ form.addEventListener("submit", (e) => {
   if (!value) return;
 
   //si accede alla proprietà selectedDate dell'oggetto singleArrayDate e si crea un array vuoto se non vi è già un array esistente 
+  //in calendar.js creo l'oggetto, in task.js accedo alla proprietà dell'oggetto e creo le <li>, e in app.js accedo alla proprietà che è la data selezionata e creo un array come valore della chiave.
   if (!singleArrayDate[selectedDate]) {
     singleArrayDate[selectedDate] = [];
   }
